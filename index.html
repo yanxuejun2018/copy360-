@@ -4,21 +4,114 @@
 		<meta charset="utf-8" />
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="css/fullpage.css"/>
+		<link rel="stylesheet" href="css/index.css" />
 			<script src="js/jquery-3.1.1.js"></script>
-			<script src="js/less.js"></script>
-		<script src="js/easings.js"></script>
-		<script src="js/fullpage.js"></script>
-		<script src="js/scrolloverflow.js"></script>
+				<!-- <script src="js/less.js"></script>   使用以后影响浏览器性能s -->
+			<script src="js/easings.js"></script>
+			<script src="js/fullpage.js"></script>
+			<script src="js/scrolloverflow.js"></script>
+				<script type="text/javascript">
+					$(function(){
+					$('#fullpage').fullpage({
+			  sectionsColor: ['#0da5d6', '#2ab561', '#de8910', '#16ba9d', '#0da5d6'],
+			   verticalCentered: false,
+			   afterLoad:function(origin,destination,direction){
+				   
+				   if (origin !== null) {
+				   	origin.item.className = origin.item.className.replace("current","");
+				   }
+				       destination.item.className = destination.item.className +" current";
+				   
+				 
+			   }
+						});
+		});
+				</script>
 	</head>
 	<body>
-	
-	
-		<script type="text/javascript">
-			$(function(){
-    $('#dowebok').fullpage({
+		<div id="fullpage">
+	<div class="section section-one">
+		<div class="logo">
+			<img src="img/logo.png" >
+		</div>
+		<div class="text">
+			<img src="img/section1_text_1.png" >
+				<img src="img/section1_text_2.png" >
+					<img src="img/section1_text_3.png" >
+						<img src="img/section1_text_4.png" >
+							<img src="img/section1_text_5.png" >
+								<img src="img/section1_text_6.png" >
+									<img src="img/section1_text_7.png" >
+										<img src="img/section1_text_8.png" >
+		</div>
+		<div class="info">
+			<img src="img/section1_info.png" >
+		</div>
+	</div>
+	<div class="section section-two">
+		<div class="shield">
+			<img src="img/section2_shield_1.png" >
+			<img src="img/section2_shield_2.png" >
+			<img src="img/section2_shield_3.png" >
+			<img src="img/section2_shield_4.png" >
+			<img src="img/section2_shield_5.png" >
+			<img src="img/section2_shield_6.png" >
+			<img src="img/section2_shield_7.png" >
+			<img src="img/section2_shield_8.png" >
+			<img src="img/section2_shield_9.png" >
+		</div>
+		<div class="info">
+			<img src="img/section2_info.png" >
+		</div>
+	</div>
+	<div class="section section-three">
+		<div class="info">
+			<img src="img/section3_info.png" >
+		</div>
+		<div>
+			<img src="img/section3_circle.png" >
+			<img src="img/section3_rocket.png" class="rocket" >
+		</div>
+	</div>
+	<div class="section section-four">
+		<div class="search">
+			<div class="top">
+				<img src="img/section4_search.png" >
+				<div class="key">
+					
+				</div>
+			</div>
+			<div class="bottom">
+				<img src="img/section4_result.png" >
+			</div>
+			
+		</div>
+		<div class="info">
+			<img src="img/section4_info.png" >
+		</div>
 		
-	});
-});
-		</script>
+		
+	</div>
+	<div class="section section-five">
+		<div class="info">
+			
+			<img src="img/section5_info.png" >
+		</div>
+		<div class="browser">
+			<b class="v-line"></b>
+			<b class="v-line"></b>
+			<i class="h-line"></i>
+			<i class="h-line"></i>
+			<div class="top">
+				<span></span>
+				<img src="img/section5_toolbar.png" >
+			</div>
+			<div class="bottom">
+				
+			</div>
+		</div>
+	</div>
+</div>
+
 	</body>
 </html>
